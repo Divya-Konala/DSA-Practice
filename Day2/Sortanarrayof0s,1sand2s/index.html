@@ -1,0 +1,27 @@
+class Solution {
+    
+    sort012(arr, N)
+    {
+        //your code here
+        let p1=-1,p2=0,p3=N-1;
+        while(p2<=p3){
+            if(arr[p2]==2){
+                swap(p2,p3);
+                p3--;
+            }else if(arr[p2]==0){
+                p1++;
+                swap(p1,p2);
+                p2++;
+            }else
+                p2++;
+        }
+        return arr;
+         
+         function swap(x,y){
+            let temp=arr[x];
+            arr[x]=arr[y];
+            arr[y]=temp;
+    }
+    }
+   
+}
